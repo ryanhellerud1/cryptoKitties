@@ -2,7 +2,7 @@ import React from 'react';
 const KittyOutput = props => {
 
   const {birthTime,genes, generation} = props.kittyInfo.kittyData
-  const date = birthTime ? new Date(birthTime * 1000).toString() : null;
+  const date = birthTime ? new Date(birthTime * 1000).toLocaleDateString('en-US',{year: 'numeric', month: 'long', day: 'numeric'}) : null;
     //const date = new Date(birthTime * 1000);
 
   return (
