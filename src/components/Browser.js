@@ -30,22 +30,17 @@ class Browser extends Component {
       web3Contract: kittyContract,
     });
     this.setState({kitties:kittyContract})
-    kittyContract.methods.getKitty(887674).call().then(console.log);
-    kittyContract.methods.getKitty(885701).call().then(console.log);
   }
 
   render() {
     console.log(this.props)
-    let kitties = this.state.kitties ? <Form  cryptoKitties = {this.state.kitties}/> : null
+    let form = this.state.kitties ? <Form  cryptoKitties = {this.state.kitties}/> : null
     return (
       <div className="browser">
         <h1>
           Kitty Browser
         </h1>
-        {kitties}
-        {/* Input to type in the kitty ID here */}
-
-        {/* Display Kitty info here */}
+        {form}
       </div>
     );
   }
@@ -56,11 +51,3 @@ Browser.contextTypes = {
 };
 
 export default Browser;
-
-// const mapStateToProps = state => {
-//   return {
-//     state: state
-//   };
-// }
-//
-// export default drizzleConnect(InputField, mapStateToProps);
