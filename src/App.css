@@ -5,7 +5,31 @@ body, html {
   color: #333;
   font-size: 16px;
 }
-
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.kitty-id{
+  font-weight:bold;
+  display:block;
+}
+.form-container{
+  margin-top:20px;
+}
+form{
+  margin-bottom:10px;
+}
+form input{
+  padding: 10px;
+      border-radius: 5px;
+      margin: 3px 3px 3px 0;
+      font-size: 18px;
+}
+form input[type="submit"], form input[type="button"]{
+  background-color: #5F6B75;
+  color:white;
+}
 .loading {
   text-align: center;
   width: 320px;
@@ -20,4 +44,10 @@ body, html {
 .error {
   color: tomato;
   padding: 10px 0;
+}
+span{
+  font-weight:bold;
+}
+p{
+  margin-top: 0;
 }
